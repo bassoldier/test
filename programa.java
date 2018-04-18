@@ -22,10 +22,11 @@ public class Programa {
         Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
         altura = entradaEscaner.nextLine ();
         int imc= calculaIndice(peso, altura);
+        canalizaIndice(imc);
 
     }
     
-    public int calculaIndice(int peso, int altura){
+    public void calculaIndice(int peso, int altura){
     	int imc= peso/(altura*altura);
     	return imc;
     }
@@ -33,10 +34,12 @@ public class Programa {
     	if(imc>30){
     		System.out.println("Estás obeso");
     	}
-    	if(imc>30){
-    		System.out.println("Estás obeso");
+    	if(imc<30 && imc>25){
+    		System.out.println("Estás sobrepeso");
     	}
-
+    	if(imc<25){
+    		System.out.println("Tu peso es normal");
+    	}
     }
 
 }
