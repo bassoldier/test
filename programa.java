@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package programa;
+
+import static java.lang.System.out;
+import java.util.Scanner;
 
 /**
  *
@@ -15,22 +13,24 @@ public class Programa {
 
     public static void main(String[] args) {
     	int peso, altura;
-    	System..out.println("Escriba su peso: ");
+        System.out.println();
+    	System.out.println("Escriba su peso: ");
         Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
-        peso = entradaEscaner.nextLine ();
-        System..out.println("Escriba su altura: ");
-        Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
-        altura = entradaEscaner.nextLine ();
+        
+        peso = Integer.parseInt(entradaEscaner.nextLine ());
+        System.out.println("Escriba su altura: ");
+        Scanner entradaEscaner2 = new Scanner(System.in); //Creación de un objeto Scanner
+        altura = Integer.parseInt(entradaEscaner2.nextLine ());
         int imc= calculaIndice(peso, altura);
-        canalizaIndice(imc);
+        analizaIndice(imc);
 
     }
     
-    public void calculaIndice(int peso, int altura){
+    public static int calculaIndice(int peso, int altura){
     	int imc= peso/(altura*altura);
     	return imc;
     }
-    public int analizaIndice(int imc){
+    public static void analizaIndice(int imc){
     	if(imc>30){
     		System.out.println("Estás obeso");
     	}
@@ -43,3 +43,4 @@ public class Programa {
     }
 
 }
+
