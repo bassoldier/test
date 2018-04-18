@@ -11,15 +11,22 @@ package programa;
  */
 public class Programa {
 
- 	int peso, altura;
+ 	
 
     public static void main(String[] args) {
-    	System..out.println("Escriba su peso: ")
+    	int peso, altura;
+    	System..out.println("Escriba su peso: ");
         Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
         peso = entradaEscaner.nextLine ();
-        System..out.println("Escriba su altura: ")
+        System..out.println("Escriba su altura: ");
         Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
         altura = entradaEscaner.nextLine ();
+        int imc= calculaIndice(peso, altura);
+        
     }
     
+    public int calculaIndice(int peso, int altura){
+    	int imc= peso/(altura*altura);
+    	return imc;
+    }
 }
