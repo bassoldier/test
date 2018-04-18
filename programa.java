@@ -22,11 +22,21 @@ public class Programa {
         Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
         altura = entradaEscaner.nextLine ();
         int imc= calculaIndice(peso, altura);
-        
+
     }
     
     public int calculaIndice(int peso, int altura){
     	int imc= peso/(altura*altura);
     	return imc;
     }
+    public int analizaIndice(int imc){
+    	if(imc>30){
+    		System.out.println("Estás obeso");
+    	}
+    	if(imc>30){
+    		System.out.println("Estás obeso");
+    	}
+
+    }
+
 }
